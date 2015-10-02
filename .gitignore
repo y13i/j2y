@@ -1,6 +1,11 @@
 j2y
 j2y.zip
 
+pkg/
+linux-*/
+darwin-*/
+windows-*/
+
 # for Travis config
 .bundle
 vendor
