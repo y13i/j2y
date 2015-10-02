@@ -8,3 +8,5 @@ deploy:
   file: j2y.zip
   on:
     repo: y13i/j2y
+    tags: true
+    all_branches: true
