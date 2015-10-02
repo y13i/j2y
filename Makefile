@@ -6,6 +6,7 @@ GOARCH=`go env GOARCH`
 
 j2y:	main.go dependencies
 	GOPATH=$(RUNTIME_GOPATH) go build -o j2y main.go
+	zip j2y.zip j2y
 
 dependencies:
 	go get github.com/codegangsta/cli
