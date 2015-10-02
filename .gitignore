@@ -1,0 +1,5 @@
+j2y
+
+# for Travis config
+.bundle
+vendor
