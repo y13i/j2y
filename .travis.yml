@@ -21,7 +21,7 @@ deploy:
   - darwin-amd64.zip
   - windows-386.zip
   - windows-amd64.zip
-	all_branches: true
+  all_branches: true
   on:
     repo: y13i/j2y
     tags: true
