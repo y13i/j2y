@@ -5,7 +5,15 @@ GOOS=`go env GOOS`
 GOARCH=`go env GOARCH`
 
 j2y:	main.go dependencies
-	./compile.sh
+	XC_ARCH=${XC_ARCH:-386 amd64}
+	XC_OS=${XC_OS:-linux darwin windows}
+
+	rm -rf pkg/
+	gox \
+	  -os="${XC_OS}" \
+	  -arch="${XC_ARCH}" \
+	  -output "{{.OS}}-{{.Arch}}/{{.Dir}}"
+
 	zip linux-386.zip linux-386/
 	zip linux-amd64.zip linux-amd64/
 	zip darwin-386.zip darwin-386/
