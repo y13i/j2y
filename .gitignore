@@ -1,7 +1,8 @@
 j2y
-j2y.zip
 
-pkg/
+*.zip
+*.tar.gz
+
 linux-*/
 darwin-*/
 windows-*/
