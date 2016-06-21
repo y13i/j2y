@@ -1,10 +1,10 @@
 package main
 
 import (
-	"./src/j2y_lib"
 	"fmt"
 	"github.com/codegangsta/cli"
 	"os"
+	"github.com/y13i/j2y/lib"
 )
 
 func main() {

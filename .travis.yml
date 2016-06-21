@@ -5,7 +5,6 @@ branches:
   only: master
 env:
 - PATH=/home/travis/gopath/bin:$PATH
-go_import_path: github.com/y13i/j2y
 before_install:
 - go get -v github.com/mitchellh/gox
 install:
@@ -17,7 +16,6 @@ deploy:
   file:
   - build/j2y-linux-386.zip
   - build/j2y-linux-amd64.zip
-  - build/j2y-darwin-386.zip
   - build/j2y-darwin-amd64.zip
   - build/j2y-windows-386.zip
   - build/j2y-windows-amd64.zip
