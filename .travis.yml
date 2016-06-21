@@ -1,11 +1,11 @@
 language: go
 go:
-- 1.4
+- 1.6
 branches:
   only: master
 env:
 - PATH=/home/travis/gopath/bin:$PATH
-- TRAVIS_BUILD_DIR=$HOME
+go_import_path: github.com/y13i/j2y
 before_install:
 - go get -v github.com/mitchellh/gox
 install:

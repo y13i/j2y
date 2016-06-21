@@ -4,9 +4,7 @@ VERSION=`git tag | tail -n 1`
 GOOS=`go env GOOS`
 GOARCH=`go env GOARCH`
 
-j2y:	main.go dependencies
-	rm -rf linux-*/ darwin-*/ windows-*/
-
+j2y:	main.go clean dependencies
 	gox -os=linux -arch=386 -output build/linux-386/{{.Dir}}
 	cd build/linux-386/ && zip -r ../j2y-linux-386.zip . && cd ../../
 
