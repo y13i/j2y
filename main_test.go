@@ -1,11 +1,11 @@
 package main
 
 import (
-  "testing"
-  "os"
+	"os"
+	"testing"
 )
 
 func TestMain(m *testing.M) {
-  run := m.Run()
+	run := m.Run()
 	defer os.Exit(run)
 }
