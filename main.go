@@ -12,7 +12,7 @@ func main() {
 
 	app.Name    = "j2y"
 	app.Usage   = "convert JSON to YAML"
-	app.Version = "0.0.6"
+	app.Version = "0.0.7"
 
 	app.Flags = []cli.Flag{
 		cli.StringFlag{

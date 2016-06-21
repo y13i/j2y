@@ -1,8 +1,6 @@
 language: go
 go:
 - 1.6
-branches:
-  only: master
 env:
 - PATH=/home/travis/gopath/bin:$PATH
 install:
