@@ -4,9 +4,11 @@ go:
 env:
 - PATH=/home/travis/gopath/bin:$PATH
 install:
-- go get github.com/codegangsta/cli
+- go get github.com/urfave/cli
 - go get github.com/ghodss/yaml
 - go get github.com/bitly/go-simplejson
+- go get golang.org/x/crypto/ssh/terminal
+before_deploy:
 - go get -v github.com/mitchellh/gox
 - gox -output build/{{.OS}}_{{.Arch}}/{{.Dir}}
 - cd build

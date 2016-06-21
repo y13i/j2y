@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/codegangsta/cli"
-	"os"
+	"github.com/urfave/cli"
 	"github.com/y13i/j2y/lib"
+	"golang.org/x/crypto/ssh/terminal"
+	"os"
 )
 
 func main() {
@@ -12,7 +13,7 @@ func main() {
 
 	app.Name    = "j2y"
 	app.Usage   = "convert JSON to YAML"
-	app.Version = "0.0.7"
+	app.Version = "0.0.8"
 
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
@@ -37,19 +38,23 @@ func main() {
 		},
 	}
 
-	app.Action = func(command *cli.Context) {
+	app.Action = func(command *cli.Context) error {
 		var source      string
 		var outputBytes []byte
 
-		if command.Bool("eval") {
-			source = "ARGV"
-		} else {
-			if command.Args().First() == "" {
-				fmt.Println("`j2y --help` to view usage.")
-				os.Exit(1)
-			}
+		if terminal.IsTerminal(0) {
+			if command.Bool("eval") {
+				source = "ARGV"
+			} else {
+				if command.Args().First() == "" {
+					fmt.Println("`j2y --help` to view usage.")
+					os.Exit(1)
+				}
 
-			source = "FILE"
+				source = "FILE"
+			}
+		} else {
+			source = "STDIN"
 		}
 
 		inputBytes := j2yLib.GetInputBytes(source, command.Args().First())
@@ -61,6 +66,8 @@ func main() {
 		}
 
 		j2yLib.Output(outputBytes, command.String("output"))
+
+		return nil
 	}
 
 	app.Run(os.Args)
