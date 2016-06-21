@@ -1,10 +1,10 @@
 package j2yLib
 
 import (
+	"bufio"
 	"fmt"
 	"io/ioutil"
 	"os"
-	"bufio"
 	"strings"
 )
 
@@ -24,17 +24,17 @@ func GetInputBytes(source, str string) []byte {
 			os.Exit(1)
 		}
 	case "STDIN":
-		scanner    := bufio.NewScanner(os.Stdin)
+		scanner := bufio.NewScanner(os.Stdin)
 
 		var inputLines []string
 
 		for scanner.Scan() {
-      inputLines = append(inputLines, scanner.Text())
-    }
+			inputLines = append(inputLines, scanner.Text())
+		}
 
-    if err := scanner.Err(); err != nil {
-      fmt.Fprintln(os.Stderr, "reading standard input:", err)
-    }
+		if err := scanner.Err(); err != nil {
+			fmt.Fprintln(os.Stderr, "reading standard input:", err)
+		}
 
 		inputBytes = []byte(strings.Join(inputLines, ""))
 	default:

@@ -3,16 +3,16 @@ package main
 import (
 	"fmt"
 	"github.com/urfave/cli"
-	"os"
-	"golang.org/x/crypto/ssh/terminal"
 	"github.com/y13i/j2y/lib"
+	"golang.org/x/crypto/ssh/terminal"
+	"os"
 )
 
 func main() {
 	app := cli.NewApp()
 
-	app.Name    = "j2y"
-	app.Usage   = "convert JSON to YAML"
+	app.Name = "j2y"
+	app.Usage = "convert JSON to YAML"
 	app.Version = "0.0.7"
 
 	app.Flags = []cli.Flag{
