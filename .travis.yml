@@ -19,21 +19,21 @@ deploy:
   api_key:
     secure: mC2ijLSB9J4zb2f5WSTygoepNsgLC9lMsKitCFqE9FLlYIwdvCM0SXnqOM6iz83BZmWYus5vU24IJ7UNMJadtrBANzcb7nfPzF9iG8EZViDK4Km+Rwx0z9jHrRlpMJcBTG6obko2L/jkRtlIg1zYiS5UQRF2QYdssrnujByORaVoX0Csz5gr6LyCtRsQ9xwtK1BP8nudiB8tvTMbKhjgbv8nReDQwaXtuJS8BoouzEmZaAbJpo2/xARnbV5LIxk6anZbS3AD3TmyTYEFI/n7HhwuoTTG6ipuEr5tmRe3wXuQFMjE33ZKHsTG43aUSpyGs2fPtZaopcN3B7FgYvy9QeUf6FpmcUihkvPNdIlGLnJO4TtP0xoHvJPyxTKAgE2VoXG4/dd6/eCavcx4u0loNmdMwMveVYdrwrgX7QzaRdeDWUm9PgCv9jPXWA3bkVZdlQNQXgNPcIBAaDyy838ZNmL4IQXhs5KugLBqx2brqM/ydmATYTV47t4X+HDEhajuI3FB7+6qzTt2qd1M0LURRjRn/i3Osc6k1c1Xg21nWNC8TkCap5dojFMOcu4R9Hau/V/ZWiKJQaPeZ2FCiO0yjuMRko9sPcgG1usjMFkp7NX85RC8BBvrPJ8tQcfh8Yxk0QZsyOKmYQ30+Q4Fa4OkKtPiGCfZDlmCZ7LtWjPpAQY=
   file:
-  - j2y-darwin_386.zip
-  - j2y-darwin_amd64.zip
-  - j2y-freebsd_386.zip
-  - j2y-freebsd_amd64.zip
-  - j2y-freebsd_arm.zip
-  - j2y-linux_386.zip
-  - j2y-linux_amd64.zip
-  - j2y-linux_arm.zip
-  - j2y-netbsd_386.zip
-  - j2y-netbsd_amd64.zip
-  - j2y-netbsd_arm.zip
-  - j2y-openbsd_386.zip
-  - j2y-openbsd_amd64.zip
-  - j2y-windows_386.zip
-  - j2y-windows_amd64.zip
+  - build/j2y-darwin_386.zip
+  - build/j2y-darwin_amd64.zip
+  - build/j2y-freebsd_386.zip
+  - build/j2y-freebsd_amd64.zip
+  - build/j2y-freebsd_arm.zip
+  - build/j2y-linux_386.zip
+  - build/j2y-linux_amd64.zip
+  - build/j2y-linux_arm.zip
+  - build/j2y-netbsd_386.zip
+  - build/j2y-netbsd_amd64.zip
+  - build/j2y-netbsd_arm.zip
+  - build/j2y-openbsd_386.zip
+  - build/j2y-openbsd_amd64.zip
+  - build/j2y-windows_386.zip
+  - build/j2y-windows_amd64.zip
   all_branches: true
   on:
     repo: y13i/j2y
