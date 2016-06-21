@@ -114,3 +114,16 @@ employees:
 - firstName: Peter
   lastName: Jones
 ```
+
+### Input from STDIN
+
+```
+$ echo '{"employees":[{"firstName":"John","lastName":"Doe"},{"firstName":"Anna","lastName":"Smith"},{"firstName":"Peter","lastName":"Jones"}]}' | j2y
+employees:
+- firstName: John
+  lastName: Doe
+- firstName: Anna
+  lastName: Smith
+- firstName: Peter
+  lastName: Jones
+```
