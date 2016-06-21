@@ -6,6 +6,7 @@ j2y
 linux-*/
 darwin-*/
 windows-*/
+build/
 
 # for Travis config
 .bundle
