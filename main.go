@@ -11,9 +11,9 @@ import (
 func main() {
 	app := cli.NewApp()
 
-	app.Name = "j2y"
-	app.Usage = "convert JSON to YAML"
-	app.Version = "0.0.7"
+	app.Name    = "j2y"
+	app.Usage   = "convert JSON to YAML"
+	app.Version = "0.0.8"
 
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
